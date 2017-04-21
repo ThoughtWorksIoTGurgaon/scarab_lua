@@ -9,4 +9,4 @@ Forked LuaUnit as git submodule for Unit Tests. Link -> https://github.com/blueb
 LuaUnit documentation : http://luaunit.readthedocs.io/en/luaunit_v3_2_1/#getting-started
 
 Run this command to add the luatest submodule recursively in the cloned repo 
---> git submodule update --init --recursive
+-> git submodule update --init --recursive
