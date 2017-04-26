@@ -26,11 +26,11 @@ function parse_read (binary_packet)
   
   service_id = binary_packet[SERVICE_ID_INDEX]-1;
   characteristic_count = binary_packet[CHARACTERISTICS_COUNT_INDEX];
-  characteristic_ids = binary_packet[CHARACTERISTICS_BUFFER_START_INDEX];
+  characteristics_ids = {}
+  
+  for i=1, characteristic_count do
+  	characteristics_ids[i] = binary_packet[CHARACTERISTICS_BUFFER_START_INDEX + i - 1]
+  end	
 
-  return Read_Packet:new{service_id=service_id, characteristic_count=characteristic_count, characteristic_ids=characteristic_ids}
+  return Read_Packet:new{service_id=service_id, characteristic_count=characteristic_count, characteristics_ids=characteristics_ids}
 end
-
-
-
-
