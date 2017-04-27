@@ -1,7 +1,6 @@
 sudo: required
 group: stable
 dist: precise
-language: c
 git:
   depth: 10
 before_install:
