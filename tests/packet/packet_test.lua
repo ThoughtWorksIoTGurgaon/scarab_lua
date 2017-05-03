@@ -57,5 +57,4 @@ function should_read_packet_for_one_service_and_two_characteristics()
     print("should_read_packet_for_one_service_and_two_characteristics passed")
 end
 
-end
 should_read_packet_for_one_service_and_two_characteristics()
