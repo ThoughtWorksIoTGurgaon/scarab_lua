@@ -2,7 +2,8 @@
 Migrating Scarab code to Lua
 
 
-Using Eclipse IDE LUA Development Tools. Link -> https://eclipse.org/ldt/
+#Using Eclipse IDE LUA Development Tools. Link -> https://eclipse.org/ldt/
+The above is now obsolete as we now use IntelliJ IDE with official Lua plugins which harnesses the power of IntelliJ shortcuts.
 
 Forked LuaUnit as git submodule for Unit Tests. Link -> https://github.com/bluebird75/luaunit
 
