@@ -12,7 +12,6 @@ function should_read_packet_for_one_service_and_zero_characteristic()
     luaunit.assertEquals(read_packet.characteristic_count, 0)
     print("should_read_packet_for_one_service_and_zero_characteristic passed")
 end
-
 should_read_packet_for_one_service_and_zero_characteristic()
 
 function should_read_packet_for_one_service_and_one_characteristic()
@@ -34,7 +33,6 @@ function should_read_packet_for_one_service_and_one_characteristic()
 
     print("should_read_packet_for_one_service_and_one_characteristic passed")
 end
-
 should_read_packet_for_one_service_and_one_characteristic()
 
 function should_read_packet_for_one_service_and_two_characteristics()
@@ -56,5 +54,4 @@ function should_read_packet_for_one_service_and_two_characteristics()
 
     print("should_read_packet_for_one_service_and_two_characteristics passed")
 end
-
 should_read_packet_for_one_service_and_two_characteristics()

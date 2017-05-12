@@ -10,7 +10,8 @@ branches:
   only:
   - master
 script:
-- lua ./tests/packet/packet_test.lua
+- lua ./tests/packet/Read_Packet_Test.lua
+- lua ./tests/packet/Response_Packet_Test.lua
 notifications:
   slack:
     secure: FIwYeH6XOWh3XVNwaU4Xhq81XsSgTgO6hqyghGfbR4cbM0tk+38DLxdIH1/z4/WQ9fz/zYgyVnXuf9r8/I2rO/2/3tL94XieYodwKeLb0zeNfXWyfFgYyF+nBPULe91U5AP4Oy6Kl90dqhAal8pS60LsPdFW7KjhxVHqK7AiA15eb10+7pbGY1ksNkPswmtFd1poyC0Hu9i6yKRJ9Jo8ykQrcWFAsPJ1miTRvPGYz/D11TA+paDPYkooiZd4ReEQogSeA0Rf13YsEpLABWMqMv9JKA8CR4NfDoArGx51FxeoyXjnfAdlrjK39XZhk8UzARZYHdesUO0KbHh15pWhA3ofp+Q4k8+reOOP5EGPL9mD26aZPGdmKliRRqvJZ2n29RlD74rVN7ILHpXAJjA1HxHDzEEXGnecca0IZ7YyrPKdSGWsHcnpUszqvzMankTs7C4owkgKiG3n8OeO9kCKJSegi+/Q2pf0grjE1sMpzeuGrqYQU/baqHj3LTua2aYSnun9p/K1+lH1QEBt1IIF4a2x6kli/DPQS0LDAH9Zvprc7eqwdcPDFDO1yzgvWokKlnNKgU4cmCn8SZQKblofhzJtEC2ZwRcgqADhl9Jb7LDao1yA7oHVGg2WOGKNpRt85VJOxdKOCKAbpm9gpvFCQo4ilVxqh8TImGbcXXEO52Y=
