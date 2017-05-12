@@ -1,4 +1,3 @@
-main = require('./src/packet/Characteristic')
 -- Keeping uninitialized/default values of id and size as -1
 
 -- Meta class
