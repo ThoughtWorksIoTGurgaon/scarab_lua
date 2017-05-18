@@ -1,5 +1,5 @@
 -- Keeping uninitialized/default values of service_id and characteristic_count as -1
-main = require('./src/packet/Characteristic')
+require('./src/packet/Characteristic')
 
 -- GLOBAL VARIABLES
 SERVICE_ID_INDEX = 6 -- INDICES IN LUA START FROM 1

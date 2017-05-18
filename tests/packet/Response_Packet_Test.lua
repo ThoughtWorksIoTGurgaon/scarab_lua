@@ -1,5 +1,7 @@
+require('./src/packet/Response_Packet')
+require( './lib/luacolor/color')
 luaunit = require('./lib/luaunit/luaunit')
-main = require('./src/packet/Response_Packet', './src/packet/Characteristic')
+print(CYAN.."RESPONSE_PACKET TESTS")
 
 function should_stringify_response_having_zero_characteristic_data()
     response_packet = Response_Packet:new { service_id = 0, characteristic_count = 0 }
@@ -14,7 +16,7 @@ function should_stringify_response_having_zero_characteristic_data()
     }
 
     luaunit.assertEquals(response_binary_packet, expected_response_binary_packet)
-    print("should_stringify_response_having_zero_characteristic_data passed")
+    print(GREEN.."should_stringify_response_having_zero_characteristic_data passed")
 end
 should_stringify_response_having_zero_characteristic_data()
 
@@ -37,7 +39,7 @@ function should_stringify_response_having_one_characteristic_data()
     }
 
     luaunit.assertEquals(response_binary_packet, expected_response_binary_packet)
-    print("should_stringify_response_having_one_characteristic_data passed")
+    print(GREEN.."should_stringify_response_having_one_characteristic_data passed")
 end
 should_stringify_response_having_one_characteristic_data()
 
@@ -62,6 +64,6 @@ function should_stringify_response_having_two_characteristic_data()
     }
 
     luaunit.assertEquals(response_binary_packet, expected_response_binary_packet)
-    print("should_stringify_response_having_two_characteristic_data passed")
+    print(GREEN.."should_stringify_response_having_two_characteristic_data passed")
 end
 should_stringify_response_having_two_characteristic_data()

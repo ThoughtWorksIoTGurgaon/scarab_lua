@@ -1,0 +1,6 @@
+RED="\27[31m"
+GREEN="\27[32m"
+YELLOW="\27[33m"
+BLUE="\27[34m"
+MAGENTA="\27[35m"
+CYAN="\27[36m"

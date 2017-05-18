@@ -1,4 +1,4 @@
-main = require('./src/packet/Characteristic')
+require('./src/packet/Characteristic')
 
 -- GLOBAL VARIABLES
 BINARY_PACKET_HEADER_BYTE_SIZE = 7

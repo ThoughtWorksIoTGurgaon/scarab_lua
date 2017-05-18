@@ -1,5 +1,7 @@
+require('./src/packet/Write_Packet')
+require( './lib/luacolor/color')
 luaunit = require('./lib/luaunit/luaunit')
-main = require('./src/packet/Write_Packet')
+print(CYAN.."WRITE_PACKET TESTS")
 
 function should_parse_write_packet_for_one_service_and_zero_characteristic()
     binary_packet = {
@@ -12,7 +14,7 @@ function should_parse_write_packet_for_one_service_and_zero_characteristic()
     luaunit.assertEquals(write_packet.service_id, 1)
     luaunit.assertEquals(write_packet.characteristic_count, 0)
     luaunit.assertEquals(write_packet.characteristics, {})
-    print("should_parse_write_packet_for_one_service_and_zero_characteristic passed")
+    print(GREEN.."should_parse_write_packet_for_one_service_and_zero_characteristic passed")
 end
 should_parse_write_packet_for_one_service_and_zero_characteristic()
 
@@ -39,7 +41,7 @@ function should_parse_write_packet_for_one_service_and_one_characteristic()
         luaunit.assertEquals(write_packet.characteristics[i], characteristic_array[i])
     end
 
-    print("should_parse_write_packet_for_one_service_and_one_characteristic passed")
+    print(GREEN.."should_parse_write_packet_for_one_service_and_one_characteristic passed")
 end
 should_parse_write_packet_for_one_service_and_one_characteristic()
 
@@ -67,6 +69,6 @@ function should_parse_write_packet_for_one_service_and_two_characteristics()
         luaunit.assertEquals(write_packet.characteristics[i], characteristic_array[i])
     end
 
-    print("should_parse_write_packet_for_one_service_and_two_characteristics passed")
+    print(GREEN.."should_parse_write_packet_for_one_service_and_two_characteristics passed")
 end
 should_parse_write_packet_for_one_service_and_two_characteristics()
