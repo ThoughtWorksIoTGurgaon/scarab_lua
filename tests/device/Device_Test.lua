@@ -19,5 +19,28 @@ function should_read_all_ports_from_device()
     end
     print(GREEN .. "should_read_all_ports_from_device passed")
 end
-
 should_read_all_ports_from_device()
+
+function should_turn_ON_the_port_from_device()
+
+    usable_ports = { Port:new { pin = 1 }, Port:new { pin = 8 }, Port:new { pin = 3 } }
+    testable_device = Device:new { ports = usable_ports }
+    status = ON
+    testable_device.ports[2]:write(status)
+
+    luaunit.assertEquals(testable_device.ports[2].toggle, status)
+    print(GREEN .. "should_turn_ON_the_port_from_device passed")
+end
+should_turn_ON_the_port_from_device()
+
+function should_turn_OFF_the_port_from_device()
+
+    usable_ports = { Port:new { pin = 1 }, Port:new { pin = 8, toggle = ON }, Port:new { pin = 3 } }
+    testable_device = Device:new { ports = usable_ports }
+    status = OFF
+    testable_device.ports[2]:write(status)
+
+    luaunit.assertEquals(testable_device.ports[2].toggle, status)
+    print(GREEN .. "should_turn_OFF_the_port_from_device passed")
+end
+should_turn_OFF_the_port_from_device()

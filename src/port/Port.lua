@@ -11,3 +11,7 @@ function Port:new(o, pin, toggle)
     self.toggle = toggle or OFF
     return o
 end
+
+function Port:write(status)
+    self.toggle = status
+end
