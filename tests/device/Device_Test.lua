@@ -44,3 +44,22 @@ function should_turn_OFF_the_port_from_device()
     print(GREEN .. "should_turn_OFF_the_port_from_device passed")
 end
 should_turn_OFF_the_port_from_device()
+
+callback_invoked = false
+function test_write_callback(pin, toggle)
+    callback_invoked = true
+    return toggle
+end
+
+function should_invoke_callback_write_function()
+    usable_ports = { Port:new { pin = 1 }, Port:new { pin = 8, toggle = ON }, Port:new { pin = 3 } }
+    testable_device = Device:new { ports = usable_ports }
+
+    test_pin=1
+    test_pin_toggle=ON
+
+    testable_device:write(test_pin, test_pin_toggle, test_write_callback)
+    luaunit.assertTrue(callback_invoked)
+    print(GREEN .. "should_invoke_callback_write_function passed")
+end
+should_invoke_callback_write_function()
