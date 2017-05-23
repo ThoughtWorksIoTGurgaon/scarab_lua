@@ -1,3 +1,6 @@
 [submodule "lib/luaunit"]
 	path = lib/luaunit
 	url = git://github.com/bluebird75/luaunit.git
+[submodule "lib/nodemcuLuaWithMqttOnESP8266"]
+	path = lib/nodemcuLuaWithMqttOnESP8266
+	url = https://github.com/ThoughtWorksIoTGurgaon/nodemcuLuaWithMqttOnESP8266
