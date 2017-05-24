@@ -11,7 +11,7 @@ function should_read_data_from_port()
     actual_toggle = testable_port.toggle
 
     luaunit.assertEquals(actual_toggle, expected_toggle)
-    print(GREEN .. "should_read_data_from_port passed")
+    print(GREEN .. "should_read_data_from_port passed" .. RED)
 end
 should_read_data_from_port()
 
@@ -23,6 +23,6 @@ function should_read_deafaut_toggle_as_OFF_from_port()
     actual_toggle = testable_port.toggle
 
     luaunit.assertEquals(actual_toggle, expected_toggle)
-    print(GREEN .. "should_read_data_from_port passed")
+    print(GREEN .. "should_read_data_from_port passed" .. RED)
 end
 should_read_deafaut_toggle_as_OFF_from_port()

@@ -17,7 +17,7 @@ function should_read_all_ports_from_device()
         end
         luaunit.assertEquals(actual_toggle, expected_toggle)
     end
-    print(GREEN .. "should_read_all_ports_from_device passed")
+    print(GREEN .. "should_read_all_ports_from_device passed" .. RED)
 end
 should_read_all_ports_from_device()
 
@@ -29,7 +29,7 @@ function should_turn_ON_the_port_from_device()
     testable_device.ports[2]:write(status)
 
     luaunit.assertEquals(testable_device.ports[2].toggle, status)
-    print(GREEN .. "should_turn_ON_the_port_from_device passed")
+    print(GREEN .. "should_turn_ON_the_port_from_device passed" .. RED)
 end
 should_turn_ON_the_port_from_device()
 
@@ -41,7 +41,7 @@ function should_turn_OFF_the_port_from_device()
     testable_device.ports[2]:write(status)
 
     luaunit.assertEquals(testable_device.ports[2].toggle, status)
-    print(GREEN .. "should_turn_OFF_the_port_from_device passed")
+    print(GREEN .. "should_turn_OFF_the_port_from_device passed" .. RED)
 end
 should_turn_OFF_the_port_from_device()
 
@@ -61,7 +61,7 @@ function should_invoke_callback_write_function()
     testable_device:write(test_pin, test_pin_toggle, test_write_callback)
     luaunit.assertTrue(callback_invoked)
     luaunit.assertEquals(testable_device.ports[1].toggle, test_pin_toggle)
-    print(GREEN .. "should_invoke_callback_write_function passed")
+    print(GREEN .. "should_invoke_callback_write_function passed" .. RED)
 end
 should_invoke_callback_write_function()
 
@@ -82,6 +82,6 @@ function should_invoke_callback_read_function()
     luaunit.assertEquals(expected_toggle, OFF)
     luaunit.assertEquals(testable_device.ports[1].toggle, OFF)
 
-    print(GREEN .. "should_invoke_callback_read_function passed")
+    print(GREEN .. "should_invoke_callback_read_function passed" .. RED)
 end
 should_invoke_callback_read_function()
